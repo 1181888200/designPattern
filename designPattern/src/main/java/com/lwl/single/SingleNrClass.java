@@ -2,7 +2,7 @@ package com.lwl.single;
 
 /**
  * 
- * 静态能不能单例
+ * 静态内部类单例
  * @author lwl
  * @create 2019年1月2日 下午4:48:22
  * @version 1.0
