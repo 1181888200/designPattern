@@ -70,6 +70,12 @@ public class CglibProxyHandler implements MethodInterceptor {
 		return obj;
 	}
 
-	 
+	public Object getObject() {
+		return object;
+	}
 
+	public void setObject(Object object) {
+		this.object = object;
+	}
+	
 }
