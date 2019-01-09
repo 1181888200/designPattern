@@ -17,7 +17,11 @@
  * 
  */
 package com.lwl.builder;
-
+/***
+ * 建造者模式  和 代理模式的区别在于：
+ * 	建造者模式： 是别人把他所需要的过程组装成一个方法，具体的每个方法都是要建造者自己实现
+ * 	代理模式：被代理的类只关注自己的方法，代理类会新增自己的方法，用于在被代理的类的方法前后
+ */
 /**
  * 建造者模式
  * @author lwl
@@ -26,7 +30,18 @@ package com.lwl.builder;
  */
 public class BuilderTest {
 
-	
-	
-	
+	public static void main(String[] args) {
+
+		PersonBuilder builder = new PersonBuilder();//建造者
+		
+		Director director = new Director(builder);//监工
+		
+		director.builder();//建造实例(监工负责监督，建造者实际建造)
+		
+		String result = builder.getResult();////获取最终生成结果
+		
+		System.out.println();
+		System.out.println(result);
+		
+	}
 }
